@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>
+     Amazon Cart
+    </title>
+    <style>
+    body{
+        font-family:arial;
+      }
+      .cost-input{
+        font-size: 15px;
+        padding:10px;
+
+      }
+      .click-button{
+        padding:10px;
+        background-color: black;
+        color:white;
+        cursor: pointer;
+      }
+
+    </style>
+</head>
+<body>
+  <p>Amazon Shipping Amount</p>
+<input placeholder="Cost of Order" class="cost-input">
+<button onclick="
+     calculateCost();
+" class="click-button">Calculate</button>
+<p class="final-cost"></p>
+  
+<script>
+  function calculateCost(){
+let inputValue=document.querySelector('.cost-input').value;
+     if(inputValue>=35){
+        document.querySelector('.final-cost').innerText=`$${inputValue}`;   
+     }
+     else{
+      alert(`You're almost there!! Add $${35-inputValue} more for Free Shipping`);
+     inputValue=Number(inputValue)+10;
+      document.querySelector('.final-cost').innerText=`$${inputValue}`;  
+     }
+  }
+</script>
+</button>
+
+</body>
+
+</html>

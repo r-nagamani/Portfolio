@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>
+      Youtube Subuscribe using DOM
+    </title>
+    <style>
+      .js-subscribe{
+        border:none;
+        background-color: black;
+        color: white;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        padding-left: 15px;
+        padding-right: 15px;
+        cursor: pointer;
+        border-radius: 40px;
+        font-weight: bold;
+      }
+      .is-subscribed{
+        background-color: rgb(240,240,240);
+        color:black;
+      }
+      body{
+        font-family:arial;
+      }
+
+    </style>
+</head>
+<body>
+  <p>YouTube Subscribe Button</p>
+  <button onclick="
+      subscribe();"   
+    class="js-subscribe">Subscribe</button>
+    
+<script>
+
+  function subscribe(){
+    
+    let buttonElement=document.querySelector('.js-subscribe');
+    
+    if(buttonElement.innerText==='Subscribe'){
+        buttonElement.innerHTML='Subscribed';
+        buttonElement.classList.add('is-subscribed');
+    }else{
+      buttonElement.innerHTML='Subscribe';
+      buttonElement.classList.remove('is-subscribed');
+    }
+  }
+ 
+</script>
+</button>
+
+</body>
+
+</html>
